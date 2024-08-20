@@ -32,4 +32,16 @@ router.post('/new', (req, res) => {
   res.redirect('/');
 });
 
+// Handle requests to /messages/:id
+router.get('/messages/:id', (req, res) => {
+    const messageId = parseInt(req.params.id, 10);
+    
+    if (messageId >= 0 && messageId < messages.length) {
+      const message = messages[messageId];
+      res.render('message', { message: message });
+    } else {
+      res.status(404).send('Message not found');
+    }
+  });
+
 module.exports = router;
