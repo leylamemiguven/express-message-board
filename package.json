@@ -2,7 +2,7 @@
   "name": "express-message-board",
   "version": "1.0.0",
   "description": "A message board application built with Express.js",
-  "main": "iapp.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
